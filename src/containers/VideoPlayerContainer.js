@@ -10,4 +10,5 @@ const mapStatetoProps = state => {
 var VideoPlayerContainer = connect(
   mapStatetoProps
 )(VideoPlayer);
+
 export default VideoPlayerContainer;

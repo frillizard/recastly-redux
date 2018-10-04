@@ -5,11 +5,12 @@ import searchYouTube from './lib/searchYouTube.js';
 import YOUTUBE_API_KEY from './config/youtube.js';
 import store from './store/store.js';
 import Provider from 'react-redux';
-//TODO: Use the Provider component to make your store available to
-//  the rest of your app.
+
+const appElement = document.getElementById('app');
 
 ReactDOM.render(
-  <Provider store={store}/>,
-  <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
-  document.getElementById('app')
+  <Provider store={store}>
+    <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />
+  </Provider>, 
+  appElement
 );
